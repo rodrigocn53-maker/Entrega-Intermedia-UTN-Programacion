@@ -13,7 +13,10 @@ Guardar una variable en css
     --primary-200: #cbc8ff;
     --primary-500: #673de5;
     --primary-700: rgb(80,37,209)
+    --primary-300: #f4f5ff;
 }
+
+/* Gran dilema, venia todo bien y al terminar, se trabo el footer como si estuviera en 1024px la screen :c */
 
 .html-vert{
     display: none;
@@ -443,16 +446,21 @@ header{
 
 .section-footer{
     height: 713px;
+    width: 100%;
     padding-top: 56px;
+    background-color: #f4f5ff;
+    display: flex;
+    justify-content: center;
 }
 
 .section-footer-inline {
     height: 657px;
-    width: 1208px;
+    width: 94.37%;
     display: flex;
     flex-direction: column;
     justify-content: end;
-    margin: auto;
+    margin-inline: 0;
+    padding: 0 40px;
 }
 
 .section-footer-logos{
@@ -460,6 +468,9 @@ header{
     margin-bottom: 24px;
     display: flex;
     flex-direction: column;
+    border-bottom: 1px solid #d5dfff;
+    justify-content: center;
+    align-items: center;
 }
 
 .section-H-social{
@@ -494,29 +505,27 @@ header{
     font-size: 32px;
 }
 
-/* .icon-social-logo i bi-linkedin {
-    width: 32px;
-    height: 32px;
-} */
 
 .section-legal-payment{
     display: flex;
     flex-direction: row-reverse;
-    justify-content: end;
+    justify-content: flex-end;
     gap: 5px;
 }
 
 .section-legal-links{
     height: 40px;
+    width: 80%;
     display: flex;
     flex-direction: row;
     justify-content: end;
     align-items: center;
-    gap: 20px;
+    justify-content: space-between;
 }
 
 .legal-box-links{
     width: auto;
+    text-align: start;
     flex-direction: row;
     align-items: end;
     justify-content: space-between;
@@ -541,7 +550,9 @@ header{
 
 .section-payment-methods img{
     height: 40px;
-    width: 58px;
+    width: 60px;
+    border-radius: 5px;
+    border: 1px solid #d5dfff;
 }
 
 .footer-copyright{
@@ -550,7 +561,6 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-top: 1px solid #d5dfff;
 }
 
 .text-copyright{
@@ -647,8 +657,54 @@ header{
 
 /* footer */
 
+.section-footer-inline{
+    width: 768px;
+}
 
+.section-H-social{
+    padding-bottom: 0;
+}
 
+.section-legal-payment{
+    flex-direction: column;
+}
+
+.section-footer-logos{
+    height: 168px;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.icon-social-logo i{
+    font-size: 26.88px;
+}
+
+.section-legal-links{
+    justify-content: start;
+    gap: 15px;
+}
+.legal-box-links{
+    height: 24px;
+}
+
+.legal-link{
+    font-size: 14px;
+}
+
+.footer-copyright{
+    height: 129px;
+    flex-direction: column;
+}
+
+.text-copyright{
+    height: 48px;
+    width: auto;
+}
+
+.text-copyright-2{
+    height: 24px;
+    width: auto;
+}
 
 
 
@@ -934,6 +990,141 @@ header{
 /*     .section-main-icon{
         padding-right: 40px;
     } */
+    
+    /* footer */
+
+    .section-footer{
+        width: auto;
+    }
+
+.section-footer-inline{
+    height: 711px;
+    width: 540px;
+    padding: 0 16px;
+}
+
+.section-H-social{
+    flex-direction: column-reverse;
+}
+
+.section-social-logos{
+    height: 64px;
+    justify-content: space-between;
+    padding: 16px 0;
+    margin-bottom: 8px;
+}
+
+.logo-H-footer{
+    flex-direction: column;
+}
+
+.section-legal-payment{
+    height: 176px;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.section-payment-methods{
+    height: 85px;
+    width: 288px;
+    margin: 0 0 24px;
+    flex-wrap: wrap;
+}
+
+.section-footer-logos{
+    height: auto;
+    margin-top: 24px;
+    margin-bottom: 0;
+}
+
+.section-footer-social{
+    height: auto;
+}
+
+.icon-social-logo i{
+    font-size: 26.88px;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-legal-links{
+    width: 290px;
+    height: auto;
+    padding-top: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5px;
+}
+.legal-box-links{
+    height: auto;
+    justify-content: space-around;
+    align-items: normal;
+    font-size: 14px;
+    margin: 0 0 8px;
+    flex-direction: column;
+}
+
+.legal-link{
+    font-size: auto;
+}
+
+.footer-copyright{
+    height: 151px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.text-copyright{
+    height: 48px;
+    width: auto;
+}
+
+.text-copyright-2{
+    height: 30px;
+    width: auto;
+}
+
+}
+
+@media screen and (max-width: 541) {
+
+    .section-footer{
+        width: 100%;
+    }
+
+    .section-footer-inline{
+        width: 100%;
+        margin: none;
+    }
+
+    .section-legal-payment{
+        height: 85px;
+        width: 368px;
+    }
+
+    .section-payment-methods{
+        width: 288px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-copyright{
+        height: 175px;
+        width: 100%;
+        padding: 24px 0 16px 0; 
+        font-size: 14px;
+    }
+
+    .text-copyright{
+        height: auto;
+        width: 100%;
+    }
+
+    .text-copyright-2{
+        height: auto;
+        width: 100%;
+    }
+
 }
 
 @media screen and (max-width: 321) {
