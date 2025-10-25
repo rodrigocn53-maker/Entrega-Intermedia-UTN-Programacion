@@ -884,16 +884,16 @@ header{
     .mails-section {
         padding: 80px 0;
     }
+    
+    /* .position-header{
+        padding: 0;
+        } */
+        
+        .header-content-wrapper{
+            padding: 0;
+        }
+
 }
-
-/* .position-header{
-    padding: 0;
-} */
-
-.header-content-wrapper{
-    padding: 0;
-}
-
 @media screen and (max-width: 767px) {
 
     .html-vert {
