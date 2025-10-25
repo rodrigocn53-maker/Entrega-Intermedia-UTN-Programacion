@@ -16,11 +16,7 @@ Guardar una variable en css
     --primary-300: #f4f5ff;
 }
 
-/* Gran dilema, venia todo bien y al terminar, se trabo el footer como si estuviera en 1024px la screen :c */
-
-.html-vert{
-    display: none;
-}
+/* separando por secciones */
 
 *{
     font-family: var(--ff-primary);
@@ -268,6 +264,7 @@ header{
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    border: none;
 }
 
 .btn-2 a{
@@ -465,23 +462,24 @@ header{
 
 .section-footer-logos{
     height: 88px;
-    margin-bottom: 24px;
+    margin-bottom: 4px;
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid #d5dfff;
     justify-content: center;
-    align-items: center;
+    padding-bottom: 15px;
 }
 
 .section-H-social{
     display: flex;
     flex-direction: row;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .logo-H-footer{
     width: 187px;
     height: 30px;
+    padding-left: 1px;
 }
 
 .section-social-logos{
@@ -581,6 +579,38 @@ header{
     color: #1d1e20;
 }
 
+/* btn-fixed */
+
+    .btn-fixed{
+        color: white;
+        background-color: #673de6;
+        border-radius: 50px;
+        padding: 10px;
+        position: fixed;
+        right: 16px;
+        bottom: 16px;
+        font-weight: 700;
+        width: auto;
+        height: 40px;
+        border-color: transparent;
+    }
+
+    .btn-fixed i{
+        padding-right: 4px;
+    }
+    
+    .btn-fixed :hover{
+        color: white;
+        background-color: rgb(80,37,209);
+        transition: 0.3s;
+    }
+    
+    .btn-fixed a{
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
 
 
 /* Media (todas) */
@@ -625,87 +655,60 @@ header{
     font-size: 24px;
     padding-right: 40px;
     }
+
+
+    /* footer */
+    
+    .section-footer-inline{
+        width: 768px;
+    }
+    
+    .section-H-social{
+        padding-bottom: 0;
+    }
+    
+    .section-legal-payment{
+        flex-direction: column;
+    }
+    
+    .section-footer-logos{
+        height: 168px;
+        margin-top: 8px;
+        margin-bottom: 0;
+    }
+    
+    .icon-social-logo i{
+        font-size: 26.88px;
+    }
+    
+    .section-legal-links{
+        justify-content: start;
+        gap: 15px;
+    }
+    .legal-box-links{
+        height: 24px;
+    }
+    
+    .legal-link{
+        font-size: 14px;
+    }
+    
+    .footer-copyright{
+        height: 129px;
+        flex-direction: column;
+    }
+    
+    .text-copyright{
+        height: 48px;
+        width: auto;
+    }
+    
+    .text-copyright-2{
+        height: 24px;
+        width: auto;
+    }
+
 }
-
-/* btn-fixed */
-
-.btn-fixed{
-    color: white;
-    background-color: #673de6;
-    border-radius: 50px;
-    padding: 10px;
-    position: fixed;
-    right: 16px;
-    bottom: 16px;
-    font-weight: 700;
-    width: auto;
-    height: 40px;
-    border-color: transparent;
-}
-
-.btn-fixed :hover{
-    color: white;
-    background-color: rgb(80,37,209);
-    transition: 0.3s;
-}
-
-.btn-fixed a{
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-/* footer */
-
-.section-footer-inline{
-    width: 768px;
-}
-
-.section-H-social{
-    padding-bottom: 0;
-}
-
-.section-legal-payment{
-    flex-direction: column;
-}
-
-.section-footer-logos{
-    height: 168px;
-    margin-top: 8px;
-    margin-bottom: 0;
-}
-
-.icon-social-logo i{
-    font-size: 26.88px;
-}
-
-.section-legal-links{
-    justify-content: start;
-    gap: 15px;
-}
-.legal-box-links{
-    height: 24px;
-}
-
-.legal-link{
-    font-size: 14px;
-}
-
-.footer-copyright{
-    height: 129px;
-    flex-direction: column;
-}
-
-.text-copyright{
-    height: 48px;
-    width: auto;
-}
-
-.text-copyright-2{
-    height: 24px;
-    width: auto;
-}
-
 
 
 @media screen and (max-width: 1139px) {
